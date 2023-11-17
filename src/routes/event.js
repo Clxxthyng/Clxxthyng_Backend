@@ -1,7 +1,0 @@
-const express = require("express")
-const router = express.Router()
-const app = express()
-
-app.get('/event', (req, res) => {
-    res.send('event page')
-})
