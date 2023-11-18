@@ -10,7 +10,7 @@ function loginHandler(req, res) {
         host: process.env.DBHost,
         user: process.env.DBUser,
         password: process.env.DBPassword,
-        database: process.env.DBDatabasew
+        database: process.env.DBDatabase
     });
 
     db.connect((err) => {
