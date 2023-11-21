@@ -1,5 +1,6 @@
 const express = require('express')
-const loginScript = require("./router/login/login");
+const loginScript = require("./router/login");
+const boardScript = require("./router/board");
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express()
@@ -21,8 +22,8 @@ app.get('/', function (req, res) {
   res.send('main')
 })
 
-app.get('/board', function (req, res) {
-    res.send('board')
+app.post('/board', function (req, res) {
+    boardScript(req, res);
 })
 
 // login
@@ -31,7 +32,7 @@ app.post('/login', function (req, res) {
 
 })
 
-app.get('/event', function (req, res) {
+app.post('/event', function (req, res) {
     res.send('event')
 })
 
